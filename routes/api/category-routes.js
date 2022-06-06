@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products
   try {
-    const results = Category.findAll({
+    const results = await Category.findAll({
       attributes: ['id', 'category_name'],
       include: [{
         model: Product,
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   try {
-    const results = Category.findByPk(req.params.id, {
+    const results = await Category.findByPk(req.params.id, {
       attributes: ['id', 'category_name'],
       include: [{
         model: Product,
@@ -87,7 +87,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try {
-    result = Category.destroy({
+    result = await Category.destroy({
       where: {
         id: req.params.id,
       },
