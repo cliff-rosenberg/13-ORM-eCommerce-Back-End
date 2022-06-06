@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
         attributes: ['id', 'product_name']
       }]
     })
-    res.json(results);
+    res.status(200).json(results);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
     if (results === null) {
       res.status(404).json({message: 'Not found!'});
     } else {
-    res.json(results);
+    res.status(200).json(results);
     };
   } catch (err) {
     res.status(400).json(err);
@@ -83,7 +83,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-//* route to delete a category
+//* route to delete a Category
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try {
