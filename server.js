@@ -3,6 +3,7 @@ require('dotenv').config({ path: __dirname + `/../.env` });
 const routes = require('./routes');
 // import sequelize connection
 
+// Set up Express.js
 const app = express();
 const PORT = process.env.PORT || 3001;
 
