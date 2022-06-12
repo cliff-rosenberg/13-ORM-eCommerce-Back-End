@@ -51,7 +51,7 @@ Because this is an API/back-end application, there is no screenshot of it. See t
 
 ## Usage
 
-The app is launched by entering "node server.js" in the command window when inside the directory holding files. The API interface is accessed through HTTP methods of GET, POST, POST and DELETE. The database is accessed via Sequelize from these medthods/routes.
+The app is launched by entering "node server.js" in the command window when inside the directory holding files. The API interface is accessed through HTTP methods of GET, POST, PUT and DELETE. The database is accessed via Sequelize from these methods/routes.
 
 ## Credits
 
